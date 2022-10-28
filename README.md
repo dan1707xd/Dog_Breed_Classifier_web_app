@@ -5,7 +5,7 @@ This project implements an algorithm to detect whether a picture contains a huma
 2. We use a pre-trained ResNet-50 model to detect dogs in images.
 3. In both of the cases above, the image is then passed to the CNN model (that is a pre-trained ResNet50 CNN) to identify which dog breed is a close resemblance to the human or the dog belongs to. In this implementation, we have 133 classes for the dog breeds.
 
-The Jupyter notebook (available in the Dog_Breed_Classifier folder both as an html or ipynb file) goes into the details of the coding work involved to accomplish our task. The notebook is delineated as follows:
+The **Jupyter notebook dog_app.ipynb** (available in the Dog_Breed_Classifier folder both as an html or ipynb file) goes into the details of the coding work involved to accomplish our task. The notebook is delineated as follows:
 1. Import Datasets
 2. Detect Humans
 3. Detect Dogs
@@ -18,29 +18,31 @@ The Jupyter notebook (available in the Dog_Breed_Classifier folder both as an ht
 
 Finally, we created a simple web app that takes a picture (user uploaded) and predicts as per our algorithm.
 
-# Prompt to Upload a picture
+# Prompt to Upload a picture:
 ![Screenshot 1](Dog_Breed_Classifier/1.jpg)
-# Prediction on a Labrador Retriever
+# Prediction on a Labrador Retriever:
 ![Screenshot 2](Dog_Breed_Classifier/2.jpg)
+# Prediction on a Car:
 ![Screenshot 3](Dog_Breed_Classifier/3.jpg)
+# Prediction on a human:
 ![Screenshot 4](Dog_Breed_Classifier/4.jpg)
 
 # Installation
-Make sure any Python 3.* is installed alongside the pandas, numpy, matplotlib, sklearn , pickle, sqlalchemy,NLTK, Plotly and Flask libraries.
+Make sure any Python 3.* is installed alongside the pandas, numpy, matplotlib, sklearn , pickle, Plotly, Flask libraries, Tensorflow and OpenCv libraries.
 
 
 # File Descriptions
-1. The App folder including the templates folder and "run.py" for the web app.
-2. The Data folder containing "Disaster_Data.db", "disaster_categories.csv", "disaster_messages.csv" and "process_data.py".
-3. The Models folder including "model_1.sav" and "train_classifier.py" for the NLP pipeline and Machine Learning model.
-4. README file
-5. Jupyter Notebook that contains all details and steps of the functions, transformers and analysis created.
+The **Dog_Breed_Classifier** folder contains:
+1. the "app.py" for the web app.
+2. the "dog_app.ipynb" or "dog_appnotebook.html" as the jupyter notebook containing all details for the project
+3. the "Resnet50_final"; which is the fully trained CNN network with 133 prediction classes.
+4. other folders with images for testing etc...
 
 # Instructions
 Run the following in the project's root directory:
-1. **python data/process_data.py** ==> to generate the database
-2. **python models/train_classifier.py** ==> to generate the classifier model that will run the web app. Note: 3 models (model_1, model_2, model_3 are defined and can be used in def main()
-3. **python run.py** ==> to run web app (make sure classifier model name matches the one in run.py)
+1. **python Dog_Breed_Classifier/app.py** ==> to run the web app
+2. Follow the instructions and link given in your terminal
+
 
 
 # Licensing, Authors, Acknowledgements
