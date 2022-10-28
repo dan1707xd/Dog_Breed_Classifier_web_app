@@ -1,17 +1,29 @@
-# Disaster Response Machine Learning Pipeline
+# Dog Identification and Breed Classifier Web App using ResNet50 as pretrained CNN
 # Project Motivation/Details
-The work accomplished for this project attempts to explore a sophisticated and novel approach to a NLP Machine Learning problem. The model's job is to classsify messages typically received during disasters. The classification categories, for example, include aid-related, medical help, lack of water etc. A high precision (or recall for certain categories) model is hugely beneficial to a disaster relief agency, which in times of crisis, will be able to allocate proper resources to the correct targets based on their demands. The data set is provided by [Figure Eight](https://www.figure-eight.com/) and the messages dealt with are ones that were collected during actual disaster events. Beyond the classification/ML learning problem, this project implements a web app that can take a user message and use the trained model to classify the message. the web app also contains some visualizations generated using the **Flask Engine**.
-In terms of sophistication, the focus is made on an ETL pipeline, NLP pipeline and finally an ML pipeline.
-1. The ETL Pipeline found in the (**data folder ==> process_data.py file**) cleans the raw messages and generates the proper classification categories. It finally returns an SQLLITE database.
-2. The NLP and ML pipeline is contained in the (**models folder ==> train_classifier.py file**) and it uses the database to extract the necessary data for additional Natural Language processing (use of NLTK tokenization) before training. In terms of feature extraction, we implement the **tfidf transformer**, a custom transformer that extracts some features of interest such as character count, capital word count etc, and another custom transformer that uses **gensim's word2vec** to generate vectors for each sentences in each message. This is done by allowing word2vec to learn the training's set corpus vocabulary and use the skip gram algorithm to generate word vectors.
-3. Finally, the model is passed through a training pipeline using gridsearch. Two training models are used and tuned. Both implement the multioutput classifier using the random forest classifier in one model and the multinaive bayes estimator in the second model. The model that is used to run the web app is the one obtained from training with all available features using the random forest classifier.
+This project implements an algorithm to detect whether a picture contains a human or a dog. Upon detection, it uses a CNN to classify the dog breed in case of a dog picture, otherwise, in case of a human, it returns the closest resemblance to a dog breed. The algorithm accomplishes this task as follows:
+1. Using OpenCV's implementation of Haar feature-based cascade classifiers to detect human faces in images, we determine if the picture is that of a human.
+2. We use a pre-trained ResNet-50 model to detect dogs in images.
+3. In both of the cases above, the image is then passed to the CNN model (that is a pre-trained ResNet50 CNN) to identify which dog breed is a close resemblance to the human or the dog belongs to. In this implementation, we have 133 classes for the dog breeds.
+
+The Jupyter notebook (available in the Dog_Breed_Classifier folder both as an html or ipynb file) goes into the details of the coding work involved to accomplish our task. The notebook is delineated as follows:
+1. Import Datasets
+2. Detect Humans
+3. Detect Dogs
+4. Create a CNN to Classify Dog Breeds (from Scratch)
+5. Use a CNN to Classify Dog Breeds (using Transfer Learning)
+6. Create a CNN to Classify Dog Breeds (using Transfer Learning)
+7. Write your Algorithm
+8. Test Your Algorithm
 
 
+Finally, we created a simple web app that takes a picture (user uploaded) and predicts as per our algorithm.
 
+# Prompt to Upload a picture
 ![Screenshot 1](Dog_Breed_Classifier/1.jpg)
-
+# Prediction on a Labrador Retriever
 ![Screenshot 2](Dog_Breed_Classifier/2.jpg)
-
+![Screenshot 3](Dog_Breed_Classifier/3.jpg)
+![Screenshot 4](Dog_Breed_Classifier/4.jpg)
 
 # Installation
 Make sure any Python 3.* is installed alongside the pandas, numpy, matplotlib, sklearn , pickle, sqlalchemy,NLTK, Plotly and Flask libraries.
