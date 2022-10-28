@@ -12,8 +12,8 @@ The **Jupyter notebook dog_app.ipynb** (available in the Dog_Breed_Classifier fo
 4. Create a CNN to Classify Dog Breeds (from Scratch)
 5. Use a CNN to Classify Dog Breeds (using Transfer Learning)
 6. Create a CNN to Classify Dog Breeds (using Transfer Learning)
-7. Write your Algorithm
-8. Test Your Algorithm
+7. Write Algorithm
+8. Test Algorithm
 
 
 Finally, we created a simple web app that takes a picture (user uploaded) and predicts as per our algorithm.
