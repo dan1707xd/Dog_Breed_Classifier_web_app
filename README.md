@@ -17,14 +17,15 @@ The **Jupyter notebook dog_app.ipynb** (available in the Dog_Breed_Classifier fo
 
 
 Finally, we created a simple web app that takes a picture (user uploaded) and predicts as per our algorithm.
+**See Screenshots of webapp below:**
 
-# Prompt to Upload a picture:
+## Prompt to Upload a picture:
 ![Screenshot 1](Dog_Breed_Classifier/1.jpg)
-# Prediction on a Labrador Retriever:
+## Prediction on a Labrador Retriever:
 ![Screenshot 2](Dog_Breed_Classifier/2.jpg)
-# Prediction on a Car:
+## Prediction on a Car:
 ![Screenshot 3](Dog_Breed_Classifier/3.jpg)
-# Prediction on a human:
+## Prediction on a human:
 ![Screenshot 4](Dog_Breed_Classifier/4.jpg)
 
 # Installation
