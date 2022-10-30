@@ -47,5 +47,4 @@ Run the following in the project's root directory:
 
 
 # Licensing, Authors, Acknowledgements
-Thanks to Figure-8 for the data!
 Thanks to UDACITY, Kaggle and StackOverflow for providing insight and solution to complications encountered along the way!
